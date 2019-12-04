@@ -48,3 +48,22 @@ git push
 ```
 
 </details>
+
+<details><summary>Add enzyme / Snapshot tests</summary>
+
+-   Install enzyme
+
+```bash
+yarn add --dev enzyme enzyme-adapter-react-16 react-test-renderer
+```
+
+-   Enzyme setup: src/setupTests.js
+
+```js
+import Enzyme from 'enzyme';
+import EnzymeAdapter from 'enzyme-adapter-react-16';
+
+Enzyme.configure({ adapter: new EnzymeAdapter() });
+```
+
+</details>
