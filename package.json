@@ -36,6 +36,9 @@
         "chai": "^4.2.0",
         "concurrently": "^4.0.1",
         "css-loader": "^1.0.0",
+        "enzyme": "^3.10.0",
+        "enzyme-adapter-react-16": "^1.15.1",
+        "enzyme-to-json": "^3.4.3",
         "eslint": "^5.7.0",
         "eslint-config-airbnb": "^17.1.0",
         "eslint-plugin-import": "^2.14.0",
@@ -62,12 +65,13 @@
         "axios": "^0.18.0",
         "body-parser": "^1.18.3",
         "cors": "^2.8.5",
-        "enzyme": "^3.7.0",
-        "enzyme-adapter-react-16": "^1.7.0",
         "express": "^4.16.4",
         "prop-types": "^15.6.2",
         "react": "^16.6.3",
         "react-dom": "^16.6.3",
         "supertest": "^3.3.0"
+    },
+    "jest": {
+        "setupTestFrameworkScriptFile": "setupTests.js"
     }
 }

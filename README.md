@@ -48,3 +48,49 @@ git push
 ```
 
 </details>
+
+<details><summary>enzyme unit and snapshot testing</summary>
+
+-   Install enzyme with yarn
+
+```bash
+yarn add -D enzyme-to-json enzyme enzyme-adapter-react-16
+```
+
+-   Install enzyme with npm
+
+```bash
+npm i -D enzyme-to-json enzyme enzyme-adapter-react-16
+```
+
+-   Enzyme setup: src/setupTests.ts
+
+```ts
+import Enzyme from 'enzyme';
+import EnzymeAdapter from 'enzyme-adapter-react-16';
+
+Enzyme.configure({ adapter: new EnzymeAdapter() });
+```
+
+-   sample snapshot test
+
+```ts
+import * as React from 'react';
+import { ReactWrapper, shallow, ShallowWrapper } from 'enzyme';
+import toJSON from 'enzyme-to-json';
+import { ErrorSvg } from '../ErrorSvg';
+
+describe('Single Invite Review', () => {
+    let wrapper: ReactWrapper | ShallowWrapper;
+
+    beforeEach(() => {
+        wrapper = shallow(<ErrorSvg />);
+    });
+
+    test('ErrorSvg snapshot', () => {
+        expect(toJSON(wrapper)).toMatchSnapshot();
+    });
+});
+```
+
+</details>
