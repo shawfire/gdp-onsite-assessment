@@ -7,12 +7,11 @@ module.exports = {
     coverageDirectory: 'coverage',
     testEnvironment: 'node',
     setupTestFrameworkScriptFile: '<rootDir>src/setup/setupTests.js',
-    moduleDirectories: [
-        'src/FE/components',
-        'node_modules',
-    ],
+    moduleDirectories: ['src/FE/components', 'node_modules'],
     moduleNameMapper: {
         '.*\\.scss$': 'identity-obj-proxy',
         '\\.(png|jpg|gif|ico|svg)$': '<rootDir>/src/setup/fileMock.js',
     },
+    testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
+    moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
 };

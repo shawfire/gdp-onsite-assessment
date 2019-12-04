@@ -15,3 +15,36 @@ nvm i `cat .nvmrc`
 -   Run `yarn test:mocha` to run the tests using Mocha.
 
 5. Run `yarn start` to run both BE and FE services.
+
+## Notes
+
+<details><summary>Git Notes</summary>
+
+-   [Generate a token to git push via https when account uses 2FA](https://github.com/settings/tokens)
+-   [Make "git push" work with 2FA](https://github.com/github/hub/issues/822)
+-   Initial commit to new repository.
+
+```bash
+git add --all
+git commit -a -m 'Initial commit'
+git branch
+git remote set-url origin https://github.com/shawfire/gdp-onsite-assessment.git
+git push
+```
+
+</details>
+
+<details><summary>Code Coverage</summary>
+
+-   Add the following lines to scripts in package.json:
+
+```json
+{
+    "scripts": {
+        "test:coverage": "concurrently \"jest --coverage --collectCoverageFrom=src/**/*.{js,jsx}\" \"open coverage/lcov-report/index.html\"",
+        "coverage:open": "open ../coverage/lcov-report/index.html"
+    }
+}
+```
+
+</details>
