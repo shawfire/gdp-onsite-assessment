@@ -30,6 +30,8 @@ git commit -a -m 'Initial commit'
 git branch
 git remote set-url origin https://github.com/shawfire/gdp-onsite-assessment.git
 git push
+git checkout master
+git checkout -b integration
 ```
 
 </details>
