@@ -70,3 +70,13 @@ Enzyme.configure({ adapter: new EnzymeAdapter() });
 ```
 
 </details>
+
+<details><summary>Support async await</summary>
+
+- add the following to index.html to support async / await
+
+```html
+        <script src="https://cdn.jsdelivr.net/npm/babel-polyfill/dist/polyfill.min.js"></script>
+``` 
+
+</details>
